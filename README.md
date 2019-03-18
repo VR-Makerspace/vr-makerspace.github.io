@@ -1,2 +1,2 @@
-# VRoom2-site
-Official VRoom2 site
+# vr-makerspace.github.io
+Official website of the first VR Makerspace in Singapore
