@@ -7931,6 +7931,13 @@ body {
 body, html {
   overflow-x: hidden; }
 
+a {
+  color: #ff5722;
+  text-decoration: none; }
+  a:hover {
+    color: #ff5722;
+    text-decoration: underline; }
+
 .head {
   position: absolute;
   top: 0;
@@ -7988,6 +7995,12 @@ body, html {
         @media (min-width: 576px) {
           .head .navbar .navbar-nav a.homenav {
             display: none; } }
+      @media (min-width: 576px) {
+        .head .navbar .navbar-nav a.signupnav {
+          background-color: #002171;
+          color: #fff;
+          line-height: 24px;
+          margin: 12px 0 12px 8px; } }
     .head .navbar .navbar-toggler {
       background-color: #ff5722;
       margin: 15px 13px;
@@ -8081,9 +8094,14 @@ body, html {
       font-weight: 600;
       color: #002171;
       line-height: 1.6;
-      margin-bottom: -48px;
       margin-left: -48px; }
-  .intro .description {
+    .intro .title h2 {
+      font-size: .6em;
+      color: #002171;
+      line-height: 1.6;
+      margin-bottom: -24px;
+      margin-left: -48px; }
+  .intro .description, .intro .what-to-expect .feature-description, .what-to-expect .intro .feature-description {
     font-size: 1.2em;
     color: #202020;
     line-height: 1.6;
@@ -8092,14 +8110,14 @@ body, html {
     margin-right: auto;
     margin-bottom: 56px; }
     @media (min-width: 576px) {
-      .intro .description {
+      .intro .description, .intro .what-to-expect .feature-description, .what-to-expect .intro .feature-description {
         margin-right: 36px;
         width: 64%; } }
     @media (min-width: 768px) {
-      .intro .description {
+      .intro .description, .intro .what-to-expect .feature-description, .what-to-expect .intro .feature-description {
         margin-right: 36px;
         width: 56%; } }
-    .intro .description .sign-up {
+    .intro .description .sign-up, .intro .what-to-expect .feature-description .sign-up, .what-to-expect .intro .feature-description .sign-up {
       background-color: #002171;
       color: #fff;
       padding: 12px;
@@ -8107,7 +8125,16 @@ body, html {
       margin-top: 24px;
       margin-left: auto;
       margin-right: 0;
-      text-align: center; }
+      text-align: center;
+      cursor: pointer;
+      -webkit-transition: all ease-in-out 0.1s;
+      -moz-transition: all ease-in-out 0.1s;
+      -ms-transition: all ease-in-out 0.1s;
+      -o-transition: all ease-in-out 0.1s;
+      transition: all ease-in-out 0.1s; }
+      .intro .description .sign-up:hover, .intro .what-to-expect .feature-description .sign-up:hover, .what-to-expect .intro .feature-description .sign-up:hover {
+        opacity: 0.64;
+        filter: alpha(opacity=64); }
   .intro .female-standing {
     position: absolute;
     top: 24px;
@@ -8164,6 +8191,10 @@ body, html {
 
 .about {
   background-color: #fff;
+  background-image: url(../img/about-bg.png);
+  background-position: bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
   text-align: center;
   padding-top: 100px;
   padding-bottom: 100px;
@@ -8183,22 +8214,206 @@ body, html {
     @media (min-width: 576px) {
       .about .heading {
         min-width: 360px; } }
-  .about .video {
+  .about .description, .about .what-to-expect .feature-description, .what-to-expect .about .feature-description {
+    font-size: 1.2em;
+    line-height: 1.6;
+    text-align: left; }
+  .about .about-boy {
+    position: absolute;
+    display: none;
+    z-index: 1; }
+    .about .about-boy img {
+      width: 100%; }
+    @media (min-width: 768px) {
+      .about .about-boy {
+        display: block;
+        bottom: 48px;
+        left: 24px;
+        width: 14%; } }
+    @media (min-width: 992px) {
+      .about .about-boy {
+        display: block;
+        bottom: 48px;
+        left: 24px;
+        width: 12%; } }
+  .about .about-girl {
+    position: absolute;
+    display: none;
+    z-index: 1; }
+    .about .about-girl img {
+      width: 100%; }
+    @media (min-width: 768px) {
+      .about .about-girl {
+        display: block;
+        bottom: 48px;
+        right: 24px;
+        width: 12%; } }
+    @media (min-width: 992px) {
+      .about .about-girl {
+        display: block;
+        bottom: 48px;
+        right: 24px;
+        width: 10%; } }
+
+.our-journey {
+  background-color: #202020;
+  background-image: url(../img/our-journey-bg.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  position: relative; }
+  .our-journey .heading {
+    background-color: #ff5722;
+    font-size: 2.4em;
+    color: #fff;
+    line-height: 1.6;
+    margin: 0 auto 48px;
+    padding: 16px 0;
+    width: 300px; }
+    .our-journey .heading h1 {
+      font-size: 1em;
+      font-weight: bold;
+      margin-bottom: -24px; }
+    @media (min-width: 576px) {
+      .our-journey .heading {
+        min-width: 360px; } }
+  .our-journey .carousel {
     background-color: #ff5722;
     padding: 16px;
     margin-right: 16px;
     margin-left: 16px;
     margin-bottom: 48px; }
     @media (min-width: 768px) {
-      .about .video {
+      .our-journey .carousel {
         margin-bottom: 0; } }
-    .about .video .inner {
+    .our-journey .carousel .inner {
       margin-bottom: -36px;
       margin-right: -24px; }
-  .about .description {
+  .our-journey .description, .our-journey .what-to-expect .feature-description, .what-to-expect .our-journey .feature-description {
     font-size: 1.2em;
+    color: #fff;
     line-height: 1.6;
+    margin-bottom: 24px;
     text-align: left; }
+
+.vision-mission {
+  background-color: #fff;
+  text-align: center;
+  position: relative; }
+  .vision-mission h1 {
+    font-size: 2.4em;
+    font-weight: bold;
+    color: #ff5722; }
+  .vision-mission .icon {
+    margin-bottom: 24px; }
+    .vision-mission .icon img {
+      width: 100px; }
+  .vision-mission .vision {
+    background-image: url(../img/vision-bg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 100px;
+    padding-bottom: 100px; }
+  .vision-mission .mission {
+    background-image: url(../img/mission-bg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 100px;
+    padding-bottom: 100px; }
+  .vision-mission .description, .vision-mission .what-to-expect .feature-description, .what-to-expect .vision-mission .feature-description {
+    font-size: 1.2em;
+    line-height: 1.6; }
+
+.principles {
+  background-color: #000051;
+  color: #fff;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 100px; }
+  .principles h1 {
+    font-size: 2.4em;
+    font-weight: bold;
+    color: #ff5722; }
+  .principles .illustration {
+    margin-top: 24px;
+    margin-bottom: 24px; }
+    .principles .illustration img {
+      max-height: 200px; }
+    @media (min-width: 768px) {
+      .principles .illustration {
+        margin-top: 0; } }
+  .principles .description, .principles .what-to-expect .feature-description, .what-to-expect .principles .feature-description {
+    font-size: 1.2em; }
+
+.what-to-expect {
+  background-color: #fff;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  text-align: center; }
+  .what-to-expect .heading {
+    background-color: #ff5722;
+    font-size: 2.4em;
+    color: #002171;
+    line-height: 1.6;
+    margin: 0 auto 48px;
+    padding: 16px 0;
+    width: 300px; }
+    .what-to-expect .heading h1 {
+      font-size: 1em;
+      font-weight: bold;
+      margin-top: 0;
+      margin-bottom: -24px; }
+    @media (min-width: 576px) {
+      .what-to-expect .heading {
+        min-width: 360px; } }
+  .what-to-expect .feature h2 {
+    font-size: 1.8em;
+    color: #002171;
+    margin-top: 24px;
+    margin-bottom: 48px; }
+  .what-to-expect .photo {
+    background-color: transparent;
+    border: 2px solid #ff5722;
+    padding: 16px;
+    margin-right: 36px;
+    margin-left: 36px;
+    margin-bottom: 24px; }
+    .what-to-expect .photo .inner {
+      margin-top: -36px;
+      margin-left: -24px; }
+  .what-to-expect .description, .what-to-expect .feature-description {
+    font-size: 1.2em;
+    line-height: 1.6; }
+  .what-to-expect h1 {
+    font-size: 2.4em;
+    font-weight: bold;
+    margin-top: 24px;
+    color: #002171; }
+  .what-to-expect .icon {
+    margin-top: 16px; }
+    .what-to-expect .icon img {
+      width: 100px; }
+  .what-to-expect .caption {
+    margin-top: 16px;
+    margin-bottom: 24px; }
+  .what-to-expect h2 {
+    font-size: 1.8em;
+    color: #002171; }
+  .what-to-expect .safety-precaution {
+    background-color: #d6d6e3;
+    width: 220px;
+    height: 220px;
+    border-radius: 220px;
+    margin: 24px auto;
+    padding: 0 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
 
 .projects {
   background-color: #e0e0e0;
@@ -8267,13 +8482,6 @@ body, html {
   position: relative;
   padding-top: 120px;
   padding-bottom: 120px; }
-  .contact a {
-    color: #fff;
-    text-decoration: none;
-    -webkit-transition: ease-in-out .1s;
-    transition: ease-in-out .1s; }
-    .contact a:hover {
-      opacity: .64; }
   .contact .heading {
     background-color: #fff;
     font-size: 2.4em;
@@ -8309,12 +8517,31 @@ body, html {
 .feedback {
   background-color: #e0e0e0;
   text-align: center;
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 100px;
+  padding-bottom: 100px;
   /* Style the buttons that are used to open the tab content */
   /* Change background color of buttons on hover */
   /* Create an active/current tablink class */
   /* Style the tab content */ }
+  .feedback .heading {
+    background-color: #ff5722;
+    font-size: 2.4em;
+    color: #002171;
+    line-height: 1.6;
+    margin: 0 auto 48px;
+    padding: 16px 0;
+    width: 300px; }
+    .feedback .heading h1 {
+      font-size: 1em;
+      font-weight: bold;
+      margin-top: 0;
+      margin-bottom: -24px; }
+    @media (min-width: 576px) {
+      .feedback .heading {
+        min-width: 360px; } }
+  .feedback .description, .feedback .what-to-expect .feature-description, .what-to-expect .feedback .feature-description {
+    font-size: 1.2em;
+    margin-bottom: 24px; }
   .feedback .tab {
     margin: 16px 0; }
   .feedback .tab button {
@@ -8391,6 +8618,57 @@ body, html {
     color: #fff;
     padding: 12px;
     width: 120px; }
+
+.sign-up {
+  background-color: #fff;
+  padding-top: 100px;
+  padding-bottom: 100px; }
+  .sign-up .heading {
+    background-color: #002171;
+    font-size: 2.4em;
+    color: #ff5722;
+    line-height: 1.6;
+    margin: 0 auto 48px;
+    padding: 16px 0;
+    text-align: center;
+    width: 300px; }
+    .sign-up .heading h1 {
+      font-size: 1em;
+      font-weight: bold;
+      margin-bottom: -24px; }
+    @media (min-width: 576px) {
+      .sign-up .heading {
+        min-width: 360px; } }
+  .sign-up h2 {
+    font-size: 1.8em;
+    color: #002171;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    text-align: center; }
+  .sign-up .step {
+    font-size: 1.2em;
+    text-align: center; }
+  .sign-up .number {
+    background-color: #ff5722;
+    font-size: 1.4em;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    margin: 8px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .sign-up .item {
+    text-align: center;
+    margin-bottom: 16px; }
+    .sign-up .item .icon {
+      margin-bottom: 16px;
+      text-align: center; }
+      .sign-up .item .icon img {
+        width: 100px; }
+  .sign-up .rules {
+    font-size: 1.2em; }
 
 .footer {
   background-color: #fff;

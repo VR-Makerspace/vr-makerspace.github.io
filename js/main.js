@@ -56,6 +56,12 @@ jQuery(document).ready(function($){
         }, 200);
     });
 
+    $(".featuresnav").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#what-to-expect").offset().top
+        }, 200);
+    });
+
     $(".projectsnav").click(function() {
         $('html, body').animate({
             scrollTop: $("#projects").offset().top
@@ -68,9 +74,9 @@ jQuery(document).ready(function($){
         }, 200);
     });
 
-    $(".feedbacknav").click(function() {
+    $(".signupnav").click(function() {
         $('html, body').animate({
-            scrollTop: $("#feedback").offset().top
+            scrollTop: $("#sign-up").offset().top
         }, 200);
     });
 
